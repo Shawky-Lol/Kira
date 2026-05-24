@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kira — Premium Game Cheats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;600;900&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Atmosphere layers -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <canvas id="glyphCanvas" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="blood-cursor" id="bloodCursor" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">Kira</div>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#status">Status</a></li>
+      <li><a href="#">Discord</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+    <button class="cart-btn" id="cartBtn">Cart (0)</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero-eyebrow">⸺ Premium Game Cheats ⸺</p>
+    <h1 class="hero-title" id="heroTitle">Kira</h1>
+    <p class="hero-sub">
+      Undetected. Unmatched. Unstoppable.<br />
+      The world's most powerful cheat suite.
+    </p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Browse Cheats</button>
+      <button class="btn-secondary" onclick="document.getElementById('status').scrollIntoView({behavior:'smooth'})">View Status</button>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-number">12K+</div><div class="stat-label">Active Users</div></div>
+    <div class="stat-box"><div class="stat-number">99.7%</div><div class="stat-label">Undetected Rate</div></div>
+    <div class="stat-box"><div class="stat-number">24/7</div><div class="stat-label">Support</div></div>
+    <div class="stat-box"><div class="stat-number">48h</div><div class="stat-label">Update Guarantee</div></div>
+  </div>
+
+  <!-- Notice bar -->
+  <div class="notice-bar" id="status">
+    ⚡ All products currently undetected — Verified: <span id="timestamp"></span>
+  </div>
+
+  <!-- Product Catalog -->
+  <section class="section" id="shop">
+    <p class="section-label">— Product Catalog</p>
+    <h2 class="section-title">Choose Your Power</h2>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <span class="product-badge hot">🔥 Bestseller</span>
+        <p class="product-game">Warzone / MW3</p>
+        <h3 class="product-name">Kira Aimbot Pro</h3>
+        <ul class="product-features">
+          <li>Silent aim + bone selection</li>
+          <li>Smoothness &amp; FOV control</li>
+          <li>No recoil &amp; spread control</li>
+          <li>Fully customizable hotkeys</li>
+          <li>HWID spoofer included</li>
+        </ul>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-old">$29.99</span>
+            <span class="price-current">$19.99</span>
+            <span class="price-period">per month</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Kira Aimbot Pro')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge new">✦ New</span>
+        <p class="product-game">Fortnite</p>
+        <h3 class="product-name">Kira Stealth Suite</h3>
+        <ul class="product-features">
+          <li>Wallhack ESP (players &amp; loot)</li>
+          <li>Instant build &amp; edit macros</li>
+          <li>Full aimbot with prediction</li>
+          <li>Anti-cheat bypass v4.1</li>
+          <li>Panic key &amp; overlay hide</li>
+        </ul>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-current">$24.99</span>
+            <span class="price-period">per month</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Kira Stealth Suite')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge sale">◈ Sale</span>
+        <p class="product-game">Apex Legends</p>
+        <h3 class="product-name">Kira Apex Dominator</h3>
+        <ul class="product-features">
+          <li>Aimbot with legend detection</li>
+          <li>ESP: health, shields, distance</li>
+          <li>Loot filter &amp; inventory radar</li>
+          <li>Recoil script (per weapon)</li>
+          <li>Stream-proof overlay</li>
+        </ul>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-old">$22.99</span>
+            <span class="price-current">$14.99</span>
+            <span class="price-period">per month</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Kira Apex Dominator')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="product-badge">∞ Lifetime</span>
+        <p class="product-game">All Games</p>
+        <h3 class="product-name">Kira God Bundle</h3>
+        <ul class="product-features">
+          <li>Access to all cheats</li>
+          <li>Priority 24/7 support</li>
+          <li>Lifetime updates included</li>
+          <li>Private Discord server</li>
+          <li>HWID spoofer + VPN included</li>
+        </ul>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-old">$299.99</span>
+            <span class="price-current">$149.99</span>
+            <span class="price-period">one-time</span>
+          </div>
+          <button class="add-btn" onclick="addToCart('Kira God Bundle')">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Kira</div>
+    <ul class="footer-links">
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Refund Policy</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Discord</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Kira Shop — For educational purposes only</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
